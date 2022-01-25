@@ -164,7 +164,7 @@
                 tool_href="departments.add_department"
                 prefix="top"
                 hide_tools="true"
-                title="Добавить отдел"
+                title="{__("add_new_department")}"
                 icon="icon-plus"}
             {/hook}
         {/capture}

@@ -19,3 +19,39 @@ msgstr "Отделы компании"
 msgctxt "Addons::description::sd_departments"
 msgid "Allows you to create departments of your company"
 msgstr "Позволяет Вам создавать отделы вашей компании"
+
+msgctxt "Languages::departments"
+msgid "departments"
+msgstr "Отделы"
+
+msgctxt "Languages::department"
+msgid "department"
+msgstr "Отдел"
+
+msgctxt "Languages::add_new_department"
+msgid "add_department"
+msgstr "Добавить новый отдел"
+
+msgctxt "Languages::departments.add_department"
+msgid "new departments"
+msgstr "Добавить новый отдел"
+
+msgctxt "Languages::director"
+msgid "director"
+msgstr "Руководитель"
+
+msgctxt "Languages::add_director"
+msgid "add_director"
+msgstr "Добавьте руководителя"
+
+msgctxt "Languages::workers"
+msgid "workers"
+msgstr "Сотрудники"
+
+msgctxt "Languages::add_workers"
+msgid "add_workers"
+msgstr "Добавить сотрудников"
+
+msgctxt "Languages::description"
+msgid "description"
+msgstr "Описание"
