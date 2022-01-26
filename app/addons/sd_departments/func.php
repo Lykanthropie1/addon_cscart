@@ -73,12 +73,31 @@ function fn_get_departments ($params = [], $items_per_page = 0, $lang_code = CAR
         $limit = db_paginate($params['page'], $params['items_per_page'], $params['total_items']);
     }
 
-    $departments = db_get_hash_array(
-        "SELECT ?p FROM ?:departments " .
-        $join .
-        "WHERE 1 ?p ?p ?p",
-        'department_id', implode(', ', $fields), $condition, $sorting, $limit
+    $cache_key = __FUNCTION__.md5(serialize(func_get_args()));
+
+    Registry::registerCache(
+        $cache_key,
+        ['departments', 'department_descriptions'],
+        Registry::cacheLevel('locale_auth'),
+        true
     );
+
+    $cache = Registry::get($cache_key);
+
+    if (!empty($cache)) {
+        $departments = $cache;
+    } else {
+        $departments = db_get_hash_array(
+            "SELECT ?p FROM ?:departments " .
+            $join .
+            "WHERE 1 ?p ?p ?p",
+            'department_id', implode(', ', $fields), $condition, $sorting, $limit
+        );
+    }
+
+    if (!empty($departments)) {
+        Registry::set($cache_key,$departments);
+    }
 
     $department_image_ids = array_keys($departments);
     $images = fn_get_image_pairs($department_image_ids, 'department', 'M', true, false, $lang_code);

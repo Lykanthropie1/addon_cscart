@@ -36,11 +36,13 @@
             ) Engine=InnoDB DEFAULT CHARSET=UTF8;
         </item>
         <item type="file" editions="ULTIMATE">database/departments_static.sql</item>
+        <item type="file" editions="ULTIMATE">database/departments_demo.sql</item>
         <item for="uninstall">DROP TABLE IF EXISTS ?:departments;</item>
         <item for="uninstall">DROP TABLE IF EXISTS ?:department_descriptions;</item>
         <item for="uninstall">DROP TABLE IF EXISTS ?:department_links;</item>
         <item for="uninstall">DELETE FROM ?:static_data WHERE param = 'departments.view'</item>
         <item for="uninstall">DELETE FROM ?:static_data_descriptions WHERE descr = 'Departments'</item>
         <item for="uninstall">DELETE FROM ?:static_data_descriptions WHERE descr = 'Отделы'</item>
+        <item for="uninstall" type="file">database/departments_del_demo.sql</item>
     </queries>
 </addon>
