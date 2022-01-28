@@ -1,11 +1,29 @@
 <?xml version="1.0"?>
 <addon scheme="3.0">
     <id>sd_departments</id>
-    <version>4.14.1.0</version>
+    <version>1.0</version>
     <priority>1200</priority>
     <position>10</position>
     <status>active</status>
     <has_icon>Y</has_icon>
+    <supplier>Simtech Development</supplier>
+    <supplier_link>https://www.simtechdev.com</supplier_link>
+    <authors>
+        <author>
+            <name>Simtech Development</name>
+            <email>sales@simtechdev.com</email>
+            <url>http://www.simtechdev.com</url>
+        </author>
+    </authors>
+    <compatibility>
+        <core_version>
+            <min>4.14.1.0</min>
+        </core_version>
+        <php_version>
+            <min>7.1.0</min>
+        </php_version>
+        <core_edition>MULTIVENDOR</core_edition>
+    </compatibility>
     <queries>
         <item for="install">
             CREATE TABLE `?:departments` (
