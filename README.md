@@ -104,9 +104,10 @@
 <details>
 	<summary><b>Как запустить автотест</b></summary><br>
 
-+ В папке var/tools установлен codeception;
-+ В папке var/tools/tests в файле acceptance.suite.yml прописать Ваш URL магазина;
-+ Из консоли зайти в var/tools и прописать команду "php vendor/bin/codecept run --steps";
++ Установить и настроить на свой URL Codeception;
++ В папке var/tools/autotests/test/acceptance лежит исполнительный файл теста;
++ Добавить исполнительный файл в папку acceptance Вашего Codeception;
++ Запустить тест;
 + Дождаться окончания автотеста.<br>
 
 </details>
