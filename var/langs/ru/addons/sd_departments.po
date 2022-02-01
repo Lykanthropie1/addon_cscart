@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: cs-cart-latest\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: Russian\n"
+"Language: ru_RU\n"
+"Plural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\n"
+"X-Crowdin-Project: cs-cart-latest\n"
+"X-Crowdin-Project-ID: 50163\n"
+"X-Crowdin-Language: ru\n"
+"X-Crowdin-File: /release-4.14.1/addons/sd_departments.po\n"
+"X-Crowdin-File-ID: 5531\n"
+"PO-Revision-Date: 2021-12-09 08:29\n"
+
+msgctxt "Addons::name::sd_departments"
+msgid "Departments management"
+msgstr "Отделы компании"
+
+msgctxt "Addons::description::sd_departments"
+msgid "Allows you to create departments of your company"
+msgstr "Позволяет Вам создавать отделы вашей компании"
+
+msgctxt "Languages::departments"
+msgid "departments"
+msgstr "Отделы"
+
+msgctxt "Languages::department"
+msgid "department"
+msgstr "Отдел"
+
+msgctxt "Languages::add_new_department"
+msgid "add_department"
+msgstr "Добавить новый отдел"
+
+msgctxt "Languages::departments.add_department"
+msgid "new departments"
+msgstr "Добавить новый отдел"
+
+msgctxt "Languages::director"
+msgid "director"
+msgstr "Руководитель"
+
+msgctxt "Languages::add_director"
+msgid "add_director"
+msgstr "Добавьте руководителя"
+
+msgctxt "Languages::workers"
+msgid "workers"
+msgstr "Сотрудники"
+
+msgctxt "Languages::add_workers"
+msgid "add_workers"
+msgstr "Добавить сотрудников"
+
+msgctxt "Languages::description"
+msgid "description"
+msgstr "Описание"

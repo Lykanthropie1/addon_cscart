@@ -1,0 +1,49 @@
+msgid ""
+msgstr "Project-Id-Version: tygh\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: English\n"
+"Language: en_US"
+
+msgctxt "Addons::name::sd_departments"
+msgid "Departments management"
+msgstr "Departments management"
+
+msgctxt "Addons::description::sd_departments"
+msgid "Allows you to create departments of your company"
+msgstr "Allows you to create departments of your company"
+
+msgctxt "Languages::departments"
+msgid "departments"
+msgstr "Departments"
+
+msgctxt "Languages::department"
+msgid "department"
+msgstr "Department"
+
+msgctxt "Languages::add_new_department"
+msgid "add_department"
+msgstr "Add new department"
+
+msgctxt "Languages::departments.add_department"
+msgid "new departments"
+msgstr "Add new department"
+
+msgctxt "Languages::director"
+msgid "director"
+msgstr "Director"
+
+msgctxt "Languages::add_director"
+msgid "add_director"
+msgstr "Add director"
+
+msgctxt "Languages::workers"
+msgid "workers"
+msgstr "Workers"
+
+msgctxt "Languages::add_workers"
+msgid "add_workers"
+msgstr "Add workers"
+
+msgctxt "Languages::description"
+msgid "description"
+msgstr "Description"

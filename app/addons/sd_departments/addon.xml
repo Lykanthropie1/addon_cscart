@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<addon scheme="3.0">
+    <id>sd_departments</id>
+    <version>1.0</version>
+    <priority>1200</priority>
+    <position>10</position>
+    <status>active</status>
+    <has_icon>Y</has_icon>
+    <supplier>Simtech Development</supplier>
+    <supplier_link>https://www.simtechdev.com</supplier_link>
+    <authors>
+        <author>
+            <name>Simtech Development</name>
+            <email>sales@simtechdev.com</email>
+            <url>http://www.simtechdev.com</url>
+        </author>
+    </authors>
+    <compatibility>
+        <core_version>
+            <min>4.14.1</min>
+        </core_version>
+        <php_version>
+            <min>7.1.0</min>
+        </php_version>
+        <core_edition>MULTIVENDOR,ULTIMATE</core_edition>
+    </compatibility>
+    <queries>
+        <item for="install">
+            CREATE TABLE `?:departments` (
+            `department_id` int(11) unsigned NOT NULL auto_increment,
+            `status` char(1) NOT NULL default 'A',
+            `timestamp` int(11) unsigned NOT NULL default 0,
+            `director_id` int(11) unsigned NOT NULL default 0,
+            PRIMARY KEY  (`department_id`),
+            KEY `director_id` (`director_id`)
+            ) Engine=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=UTF8;
+        </item>
+        <item for="install">
+            CREATE TABLE `?:department_descriptions` (
+            `department_id` int(11) unsigned NOT NULL default 0,
+            `lang_code` char(2) NOT NULL default '',
+            `department` varchar(255) NOT NULL default '',
+            `description` text default NULL,
+            PRIMARY KEY  (`department_id`,`lang_code`)
+            ) Engine=InnoDB DEFAULT CHARSET=UTF8;
+        </item>
+        <item for="install">
+            CREATE TABLE `?:department_links` (
+            `department_id` int(11) unsigned NOT NULL default 0,
+            `worker_id` int(11) unsigned NOT NULL default 0,
+            PRIMARY KEY  (`department_id`,`worker_id`),
+            KEY `worker_id` (`worker_id`),
+            KEY `department_id` (`department_id`)
+            ) Engine=InnoDB DEFAULT CHARSET=UTF8;
+        </item>
+        <item type="file" editions="ULTIMATE">database/departments_static.sql</item>
+        <item type="file" editions="ULTIMATE">database/departments_demo.sql</item>
+        <item for="uninstall">DROP TABLE IF EXISTS ?:departments;</item>
+        <item for="uninstall">DROP TABLE IF EXISTS ?:department_descriptions;</item>
+        <item for="uninstall">DROP TABLE IF EXISTS ?:department_links;</item>
+        <item for="uninstall">DELETE FROM ?:static_data WHERE param = 'departments.view'</item>
+        <item for="uninstall">DELETE FROM ?:static_data_descriptions WHERE descr = 'Departments'</item>
+        <item for="uninstall">DELETE FROM ?:static_data_descriptions WHERE descr = 'Отделы'</item>
+        <item for="uninstall" type="file">database/departments_del_demo.sql</item>
+    </queries>
+</addon>
